@@ -1,0 +1,90 @@
+/* Homepage */
+
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.jumbotron {
+  background-color: gold;
+}
+
+.ml3 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.col-sm-4 {
+  font-weight: bold; 
+  
+  color: black; 
+
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: gold;
+  padding: 25px;
+}
+
+
+/* Map Page */
+
+
+html,
+body,
+#map {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.legend {
+  padding: 10px;
+  line-height: 18px;
+  color: #555;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.legend i {
+  float: left;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+.leaflet-bottom.leaflet-left {
+  width: 90%;
+}
+
+.leaflet-control-container .leaflet-timeline-controls {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+button {
+  margin-top: 20px;
+  line-height: 60px;
+  font-weight: bold;
+  padding: 0 40px;
+  background: salmon;
+  border: none;
+}
+button:hover {
+  background: lightsalmon;
+}
+
+.bar {
+  fill: orange;
+}
+
+.bar:hover {
+  fill: green;
+}
