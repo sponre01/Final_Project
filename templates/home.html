@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Final Project</title>
@@ -15,6 +15,133 @@
 
 
 </body>
-<!-- <script src="../static/js/new_lib.js"></script> -->
+<script src="../static/js/new_lib.js"></script>
 
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<title>Final Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+.myLink {display: none}
+.city {display:none}
+</style>
+<body class="w3-light-grey">
+
+<!-- Navigation Bar -->
+<div class="w3-bar w3-white w3-border-bottom w3-xlarge">
+  <a href="#" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-map-marker w3-margin-right"></i>Divvy Bike Project</b></a>
+  <a href="#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey"><i class="fa fa-search"></i></a>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-hide-small" style="max-width:1500px">
+  <img class="w3-image" src="https://d21xlh2maitm24.cloudfront.net/chi/top-shot.jpg?mtime=20170626122538" alt="Divvy" width="1500" height="700">
+  <div class="w3-display-middle" style="width:65%">
+    <div class="w3-bar w3-black">
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Traffic');"><i class="fa fa-bicycle w3-margin-right"></i>Traffic</button>
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Map');"><i class="fa fa-map w3-margin-right"></i>Map</button>
+    </div>
+
+    <!-- Tabs -->
+    <div id="Traffic" class="w3-container w3-white w3-padding-16 myLink">
+      <h3>Travel Chicago with Divvy</h3>
+      <div class="w3-row-padding" style="margin:0 -16px;">
+        <div class="w3-quarter">
+          <label>From</label>
+          <input class="w3-input w3-border" type="text" placeholder="Departing from">
+        </div>
+        <div class="w3-quarter">
+          <label>Trip Duration</label>
+          <input class="w3-input w3-border" type="text" placeholder="Trip Time">
+        </div>
+        <div class="w3-quarter">
+          <label>Gender</label>
+          <input class="w3-input w3-border" type="text" placeholder="female/male">
+        </div>
+        <div class="w3-quarter">
+          <label>Divvy Subscriber?</label>
+          <input class="w3-input w3-border" type="text" placeholder="yes/no">
+        </div>
+      </div>
+      <p><button onclick="document.getElementById('Predict').style.display='block'" class="w3-button w3-black">Age Predictor</button>
+    </div>
+
+    <div id="Map" class="w3-container w3-white w3-padding-16 myLink">
+      <h3>Map Smarts</h3>
+      <p>Explore the Chicago Biking Neighborhoods</p>
+      <p><button class="w3-button w3-dark-grey">See Map</button></p>
+    </div>
+
+    <div id="Predict" class="w3-modal">
+      <div class="w3-modal-content">
+       <header class="w3-container w3-blue"> 
+        <span onclick="document.getElementById('Predict').style.display='none'" 
+        class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+        <h2>The Machine Predicts Your Age To Be: {AgeResult}</h2>
+       </header>
+     
+       <div id="AgeResult" class="w3-container">
+        <h1 class="w3-large"> And, just for fun, the muscian that topped the Billboard charts during the year you were born was: </h1>
+        <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:30%" alt="Image">
+       </div>
+     
+       <div class="w3-container w3-light-grey w3-padding">
+        <button class="w3-button w3-right w3-white w3-border" 
+        onclick="document.getElementById('Predict').style.display='none'">Close</button>
+       </div>
+      </div>
+     </div>
+  
+  </div>
+</header>
+
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-center w3-opacity w3-margin-bottom">
+  <h5 class="w3-xlarge">Find Us On</h5>
+  <div class="w3-xlarge w3-padding-16">
+    <button style="font-size:24px;color:darkgreen">Final_Project <a href="https://github.com/sponre01/Final_Project" class="fa fa-github"></a></button>  
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<script>
+// Tabs
+function openLink(evt, linkName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("myLink");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(linkName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+
+// Pop Up 
+document.getElementsByClassName("tablink")[0].click();
+
+</script>
+
+</body>
 </html>
+
+
+
+
+
+ 
+</body>
+</html> 
