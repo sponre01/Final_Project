@@ -1,3 +1,6 @@
 The average age of Divvy riders is 36 years.
 
 The overall average trip duration is 24.39 minutes.
+
+Top Departure Station: Streeter Dr & Grand Ave (21,741)
+Top Destination Station: Canal St & Adams St (17,198)
