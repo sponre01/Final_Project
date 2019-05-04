@@ -1,0 +1,3 @@
+The average age of Divvy riders is 36 years.
+
+The overall average trip duration is 24.39 minutes.

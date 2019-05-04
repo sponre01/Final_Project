@@ -93,4 +93,28 @@ onEachFeature: function(feature, layer) {
 }
 }).addTo(map)
 
+// make heatmap legend
+var legend = L.control({position: 'bottomleft'});
+legend.onAdd = function (map) {
+
+  var div = L.DomUtil.create('div', 'info legend'),
+      grades = [0, 500, 1000, 2000, 4000, 6000, 8000, 9000],
+      labels = [];
+      div.innerHTML+='<div><b><h3>Legend: Census Tract Group</h3></b></div>';
+  // loop through our magnitude intervals and generate a label with a colored square for each interval
+  for (var i = 0; i < grades.length; i++) {
+      div.innerHTML +=
+          '<i style=\"background:' 
+          + getColor(grades[i] + 1) 
+          + '\"></i> ' 
+          + '<b>' 
+          + grades[i] 
+          + (grades[i + 1] ? '&ndash;' + grades[i + 1]  + '</b>' + '<br>' : '+');
+  }
+
+  return div;
+};
+
+legend.addTo(map);
+
 });
