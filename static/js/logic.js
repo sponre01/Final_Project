@@ -58,7 +58,7 @@ function getColor(d) {
 
 
 
-  var link = "data/boundaries.json";
+  var link = "../data/boundaries.json";
 
 // Make GEOJSON heatmap
 d3.json(link, function(error, data) {
@@ -166,7 +166,7 @@ var destination_list = [
   {name: "Millennium Park", location: [41.8810317,	-87.62408432]},
   {name: "Theater on the Lake", location: [41.926277,	-87.630834]},
   {name: "Michigan Ave & Washington St", location: [41.88389277,	-87.62464914]},
-  {name: "Lake Shore Dr & Monroe St", location: [41.880958	-87.616743]},
+  {name: "Lake Shore Dr & Monroe St", location: [41.880958,	-87.616743]},
   {name: "Daley Center Plaza", location: [41.884241,	-87.629634]},
   {name: "Michigan Ave & Oak St", location: [41.90096039,	-87.62377664]},
   {name: "Kingsbury St & Kinzie St", location: [41.88917683,	-87.63850577]},
