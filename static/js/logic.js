@@ -148,7 +148,7 @@ var departure_list = [
 // Loop through the cities array 
 for (var i = 0; i < departure_list.length; i++) {
   var station = departure_list[i];
-  L.circle(station.location,{color: '#53DEEB', fillColor: '#53DEEB', fillOpacity: 0.75, radius: 400})
+  L.circle(station.location,{color: '#57CFB5', fillColor: '#57CFB5', fillOpacity: 0.75, radius: 400})
     .bindPopup("<h3>" + station.name + "</h3>")
     .addTo(departure_stations);
 }
