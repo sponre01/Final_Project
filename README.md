@@ -47,4 +47,8 @@ We used bootstrap and some HTML/CSS magic to create a website to display these v
 <br>
 <br>
 
-###
+### Machine Learning
+We found that a simple, single-layer machine learning model with a linear regression (or anything else) wasn't smart enough to determine any real trends in the data. We were able to confirm a few things that did NOT have a coorelation, though, which is sometimes just as interesting! (I'm trying guys, okay?)
+
+### Neural Networks
+So we used a neural network! This gave us some more interesting insight and took us way beyond what our inital Tableau wanderings could.
