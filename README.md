@@ -1,5 +1,5 @@
 # Final Project
-The Final Project for Northwestern's Data Science Bootcamp! Thank you all for sticking with us through this crazy whirlwind adventure -  we've learned so much and are super proud of how much we've been able to accomplish with just 6 months of dedicated work. We all still have quite a ways to go, but we're leaving this course confident that we've squeezed out as much as we can.
+The Final Project for Northwestern's Data Science Bootcamp! Thank you all for sticking with us through this crazy whirlwind adventure -  we've learned so much and are super proud of how much we've been able to accomplish with just 6 months of dedicated work. We all still have much to learn, but we're leaving this course confident that we've squeezed out as much know-how and practical googling skills as we can.
 
 __Team Members__: haneenammouri, jzefron, Michele-Lodl and sponre01
 
