@@ -48,7 +48,16 @@ We used bootstrap and some HTML/CSS magic to create a website to display these v
 <br>
 
 ### Machine Learning
-We found that a simple, single-layer machine learning model with a linear regression (or anything else) wasn't smart enough to determine any real trends in the data. We were able to confirm a few things that did NOT have a coorelation, though, which is sometimes just as interesting! (I'm trying guys, okay?)
+
+_Linear Regression Models_
+- We found that a simple, single-layer machine learning model with a linear regression (or anything else) wasn't smart enough to determine any real trends in the data. We were able to confirm a few things that did NOT have a coorelation, though, which is sometimes just as interesting! (I'm trying guys, okay?)
+
+- For example, see the plot below - it corroborates the bar graph we got from Tableau, showing that there's not much of a difference between the male and female riders when considering trip duration, however, the "null" gender group is skewed a bit toward the high side.
+
+![alt text](https://github.com/sponre01/Final_Project/blob/master/charts/GenderVSduration.png)
+
+_Random Forest_
+- We turned to a random forest model next, which needed to be run on Zepl due to the fact that our poor little local machines blew up when we tried a Jupyter notebook :) We also decided that Zepl is kinda the worst? Anyone else? No, just us? Coolcoolcool
 
 ### Neural Networks
 So we used a neural network! This gave us some more interesting insight and took us way beyond what our inital Tableau wanderings could.
