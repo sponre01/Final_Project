@@ -148,7 +148,7 @@ var departure_list = [
 // Loop through the cities array 
 for (var i = 0; i < departure_list.length; i++) {
   var station = departure_list[i];
-  L.circle(station.location,{color: 'white', fillColor: '#57CFB5', fillOpacity: 0.75, radius: 400})
+  L.circle(station.location,{color: 'white', fillColor: '#57CFB5', fillOpacity: 0.75, radius: 300})
     .bindPopup("<h3>" + station.name + "</h3>")
     .addTo(departure_stations);
 }
@@ -180,7 +180,7 @@ var destination_list = [
 // Loop through the cities array 
 for (var i = 0; i < destination_list.length; i++) {
   var station = destination_list[i];
-  L.circle(station.location,{color:"white",fillColor: "#EEDA17",fillOpacity: 0.75,radius: 400})
+  L.circle(station.location,{color:"white",fillColor: "#EEDA17",fillOpacity: 0.75, radius: 300})
     .bindPopup("<h3>" + station.name + "</h3>")
     .addTo(destination_stations);
 }
