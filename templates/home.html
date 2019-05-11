@@ -28,6 +28,10 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 .myLink {display: none}
@@ -53,25 +57,45 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     <!-- Tabs -->
     <div id="Traffic" class="w3-container w3-white w3-padding-16 myLink">
       <h3>Travel Chicago with Divvy</h3>
-      <div class="w3-row-padding" style="margin:0 -16px;">
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                        <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4"/>
+                        <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker4').datetimepicker({
+                        format: 'L'
+                    });
+                });
+            </script>
+        </div>
+    </div>
         <div class="w3-quarter">
-          <label>From</label>
-          <input class="w3-input w3-border" type="text" placeholder="Departing from">
+          <label>From latitute</label>
+          <input class="w3-input w3-border" type="text" placeholder="Departing from latitute">
         </div>
         <div class="w3-quarter">
-          <label>Trip Duration</label>
-          <input class="w3-input w3-border" type="text" placeholder="Trip Time">
+          <label>From longitude</label>
+          <input class="w3-input w3-border" type="text" placeholder="Departing from longitude">
         </div>
         <div class="w3-quarter">
-          <label>Gender</label>
-          <input class="w3-input w3-border" type="text" placeholder="female/male">
+          <label>Station Capacity</label>
+          <input class="w3-input w3-border" type="text" placeholder="capacity">
         </div>
-        <div class="w3-quarter">
+        <!-- <div class="w3-quarter">
           <label>Divvy Subscriber?</label>
           <input class="w3-input w3-border" type="text" placeholder="yes/no">
-        </div>
+        </div> -->
       </div>
-      <p><button onclick="document.getElementById('Predict').style.display='block'" class="w3-button w3-black">Age Predictor</button>
+      <p><button onclick="document.getElementById('Predict').style.display='block'" class="w3-button w3-black">Bikes Predictor</button>
     </div>
 
     <div id="Map" class="w3-container w3-white w3-padding-16 myLink">
@@ -209,7 +233,13 @@ function openLink(evt, linkName) {
 document.getElementsByClassName("tablink")[0].click();
 
 </script>
-
+ <script type="text/javascript">
+  $(function () {
+      $('#datetimepicker1').datetimepicker({
+          format: 'LT'
+      });
+  });
+</script>
 </body>
 </html>
 
