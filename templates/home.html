@@ -65,6 +65,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     <!-- Tabs -->
     <div id="Traffic" class="w3-container w3-white w3-padding-16 myLink">
       <h3>Travel Chicago with Divvy</h3>
+      <P>How many bikes will be rented today? (Actual Functionality coming soon*)</P>
+      <img src="../images/divvy-row.jpg" style="width:50%"></img>
+      <P>Enter the date, station latitude and longitude, and the number of bikes available at that station, and we'll tell you how many bikes will likely be rented! *See our neural network folder for the behind-the-scenes action. Right now we don't have it linked</P>
       <div class="container">
         <div class="row">
             <div class="col-sm-6">
@@ -116,15 +119,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     
 
     <div id="Predict" class="w3-modal">
+        
       <div class="w3-modal-content">
        <header class="w3-container w3-blue"> 
         <span onclick="document.getElementById('Predict').style.display='none'" 
         class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
-        <h2>The Machine Predicts Your Age To Be: {AgeResult}</h2>
+        <h2>The number of bikes rented today will be: {BikeResult}</h2>
        </header>
      
        <div id="AgeResult" class="w3-container">
-        <h1 class="w3-large"> And, just for fun, the muscian that topped the Billboard charts during the year you were born was: </h1>
+        <h1 class="w3-large"> And, just for fun, the muscian that topped the Billboard charts during the year you were born was (This used to be an age predictor): </h1>
         <!-- <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:30%" alt="Image"> -->
         <img src="../images/450px-Poison.jpg" class="img-responsive" style="width:30%" alt="Image">
        </div>
