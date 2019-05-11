@@ -25,6 +25,14 @@
 <title>Final Project</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+    <!-- d3 JavaScript -->
+<script src="https://d3js.org/d3.v4.min.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -101,8 +109,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     <div id="Map" class="w3-container w3-white w3-padding-16 myLink">
       <h3>Map Smarts</h3>
       <p>Explore the Chicago Biking Neighborhoods</p>
-      <p><button class="w3-button w3-dark-grey">See Map</button></p>
+      <div id="map"></div>
+      <a href="map.html" class="w3-button w3-dark-grey">See Map</a>
     </div>
+
+    
 
     <div id="Predict" class="w3-modal">
       <div class="w3-modal-content">
@@ -114,7 +125,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
      
        <div id="AgeResult" class="w3-container">
         <h1 class="w3-large"> And, just for fun, the muscian that topped the Billboard charts during the year you were born was: </h1>
-        <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:30%" alt="Image">
+        <!-- <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:30%" alt="Image"> -->
+        <img src="../images/450px-Poison.jpg" class="img-responsive" style="width:30%" alt="Image">
        </div>
      
        <div class="w3-container w3-light-grey w3-padding">
@@ -142,12 +154,23 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     <div class="w3-third w3-margin-bottom">
       <img src="https://chicagounionstation.com/imager/general/670/ToTrains_1ca693282fbd21c81e38982bf5333bdf.jpg" alt="Union Stat" style="width:100%">
       <div class="w3-container w3-white">
-        <h3>-                                -</h3>
         <h3>Most Popular Destination Station</h3>
         <h6 class="w3-opacity">Canal St & Adams St</h6>
         <p>17,198 stops to this Destination Station in 2018</p>
         <p class="w3-large"><i class="fa fa-bicycle"></i></p>
-        <button class="w3-button w3-block w3-black w3-margin-bottom">See Graph</button>
+        <!-- <button class="w3-button w3-block w3-black w3-margin-bottom">See Graph</button> -->
+        <button onclick="document.getElementById('Destination').style.display='block'" class="w3-button w3-block w3-black w3-margin-bottom">See Graph</button>
+        <div id="Destination" class="w3-modal">
+          <div class="w3-modal-content">
+            <div class="w3-container" >
+              <span onclick="document.getElementById('Destination').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+              <h1></h1>
+              <h3>Most Popular Destination Station</h3>
+              <img src="../charts/Top_20_Destinations.PNG">
+            </div>
+          </div>
+        </div>
+        
       </div>
     </div>
     <div class="w3-third w3-margin-bottom">
@@ -157,17 +180,39 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
         <h6 class="w3-opacity">Streeter Dr & Grand Ave</h6>
         <p>21,741 starts from this Departure Station in 2018</p>
         <p class="w3-large"><i class="fa fa-bicycle"></i></p>
-        <button class="w3-button w3-block w3-black w3-margin-bottom">See Graph</button>
+        <!-- <button class="w3-button w3-block w3-black w3-margin-bottom">See Graph</button> -->
+        <button onclick="document.getElementById('Departure').style.display='block'" class="w3-button w3-block w3-black w3-margin-bottom">See Graph</button>
+        <div id="Departure" class="w3-modal">
+          <div class="w3-modal-content">
+            <div class="w3-container" >
+              <span onclick="document.getElementById('Departure').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+              <h1></h1>
+              <h3>Most Popular Departure Station</h3>
+              <img src="../charts/Top_20_Departures.PNG">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="w3-third w3-margin-bottom">
-      <img src="/w3images/room_deluxe.jpg" alt="Norway" style="width:100%">
+      <img src="../charts/GenderVSduration.png" alt="WE" style="width:100%">
       <div class="w3-container w3-white">
         <h3>Gender v. Trip Duration</h3>
         <h6 class="w3-opacity">Hypothesis: notable correlation</h6>
         <p>Who runs the world?!</p>
-        <p>WE do. Glad we were wrong.</p>
         <p class="w3-large"><i class="fa fa-birthday-cake"></i></p>
+        <button onclick="document.getElementById('we').style.display='block'" class="w3-button w3-block w3-black w3-margin-bottom">See Graph</button>
+        <div id="we" class="w3-modal">
+          <div class="w3-modal-content">
+            <div class="w3-container" >
+              <span onclick="document.getElementById('we').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+              <h1></h1>
+              <h3>WE do. Glad we were wrong.</h3>
+              <img src="../charts/Trip_duration_vs_gender.PNG">
+            </div>
+          </div>
+      </div>
+    </div>
       </div>
     </div>
   </div>
@@ -181,28 +226,72 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
           <h6 class="w3-opacity">TBD</h6>
           <p>TBD</p>
           <p class="w3-large"><i class="fa fa-bicycle"></i></p>
-          <button class="w3-button w3-block w3-black w3-margin-bottom">See Graph</button>
+
+
+          <!-- button click -->
+
+          <button onclick="document.getElementById('Network').style.display='block'" class="w3-button w3-block w3-black w3-margin-bottom">See Graph</button>
+          <div id="Network" class="w3-modal">
+            <div class="w3-modal-content">
+              <div class="w3-container" >
+                <span onclick="document.getElementById('Network').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <h1></h1>
+                <h3>Network</h3>
+                <img src="https://media.pitchfork.com/photos/5ad4bfdaef431113fa5a0c85/1:1/w_320/Jonathan%20Richman-%20I,%20Jonathan.jpg">
+              </div>
+            </div>
         </div>
       </div>
+    </div>
+
+
       <div class="w3-third w3-margin-bottom">
         <img src="https://d21xlh2maitm24.cloudfront.net/wdc/wrigley-field.png?mtime=20170131102104" alt="Wrigley" style="width:100%">
         <div class="w3-container w3-white">
           <h3>More Bikes as You Head North</h3>
           <h6 class="w3-opacity">Bike to Wrigley!</h6>
           <p>Many bikes in downtown areas.</p>
-          <button class="w3-button w3-block w3-black w3-margin-bottom">See Graph</button>
+
+          <!-- button click -->
+          <button onclick="document.getElementById('Lat').style.display='block'" class="w3-button w3-block w3-black w3-margin-bottom">See Graph</button>
+          <div id="Lat" class="w3-modal">
+            <div class="w3-modal-content">
+              <div class="w3-container" >
+                <span onclick="document.getElementById('Lat').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <h1></h1>
+                <h3>More Bikes as You Head North!</h3>
+                <img src="../charts/Lat_v_Cap.png">
+              </div>
+            </div> 
+          </div>
         </div>
       </div>
+
+
       <div class="w3-third w3-margin-bottom">
         <img src="data:image/jpeg;base64,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" alt="Lake" style="width:100%">
         <div class="w3-container w3-white">
           <h3>More Bikes as You Head East</h3>
           <h6 class="w3-opacity">Bike to the lake!</h6>
           <p>Many bikes in downtown areas.</p>
-          <button class="w3-button w3-block w3-black w3-margin-bottom">See Graph</button>
+          <!-- button click -->
+
+          <button onclick="document.getElementById('Long').style.display='block'" class="w3-button w3-block w3-black w3-margin-bottom">See Graph</button>
+          <div id="Long" class="w3-modal">
+            <div class="w3-modal-content">
+              <div class="w3-container" >
+                <span onclick="document.getElementById('Long').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <h1></h1>
+                <h3>More Bikes as You Head East!</h3>
+                <img src="../charts/Long_v_Cap.png">
+              </div>
+            </div> 
+          </div>
         </div>
-      </div>
     </div>
+  </div>
+
+  
 
 <!-- Footer -->
 <footer class="w3-container w3-center w3-opacity w3-margin-bottom">
@@ -240,6 +329,8 @@ document.getElementsByClassName("tablink")[0].click();
       });
   });
 </script>
+<script type="text/javascript" src="../static/js/config.js"></script>
+<script type="text/javascript" src="../static/js/logic.js"></script>
 </body>
 </html>
 
